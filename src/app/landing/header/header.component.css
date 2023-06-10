@@ -1,0 +1,69 @@
+
+
+header{
+    position: relative;
+    display:flex;
+    width: 100%;
+}
+
+.logo{
+    flex-grow: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #1C4044;
+    border-radius: 8px;
+    user-select: none;
+}
+
+.logo .text{
+    display: flex;
+    height: 100%;
+    padding-bottom: 2px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu-panel-wrapper{
+    flex-grow: 1;
+}
+
+
+
+.menu-btn-container{
+    flex:auto 0 0;
+    width: 60px;
+    height: 60px;
+    padding: 19px;
+}
+.menu-btn{
+    width: 28px;
+    height: 28px;
+    padding: 3px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    opacity: 1.0;
+    transition: ease 0.3s border-color;
+    transition-property: border-color, opacity;
+}
+.menu-btn.menu-open{
+    opacity: 0.5;
+    border-color: rgb(131, 131, 131);
+}
+.menu-btn img{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 920px){
+    .menu-btn-container{
+        display: none;
+    }
+}

@@ -1,0 +1,9 @@
+:host{
+    --bg-color-primary: white;
+    --bg-color-secondary:#F5F5F5;
+    font: 700 16px Inter;
+}
+
+*{
+    box-sizing: border-box;
+}

@@ -1,0 +1,137 @@
+
+.menu-panel ul{
+    list-style: none;
+    padding: 0 10px;
+    margin: 0;
+}
+
+@media screen and (max-width: 520px) {
+        
+    .menu-panel{
+        position: absolute;
+        top: 46px;
+        right: 12px;
+        min-width: 200px;
+        padding: 10px;
+        background-color: white;
+        border-radius: 12px 0 12px 12px;
+        border: 1px solid rgb(192, 192, 192);
+        transform-origin: top;
+        transform: scaleY(0.0);
+        opacity: 0;
+        transition: ease-out 0.3s transform;
+        transition-property: transform,opacity;
+    }
+    .menu-panel.menu-open{
+        transform: scaleY(1.0);
+        transition-timing-function: ease-in;
+        opacity: 1;
+    }
+    
+    .menu-panel li{
+        padding: 6px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .menu-panel li:hover{
+        background-color: rgb(230, 230, 230);
+    }
+
+}
+
+
+
+
+@media screen and (min-width: 520px) and (max-width: 920px) {
+    .menu-panel .links{
+        position: absolute;
+        top: 46px;
+        right: 12px;
+        padding: 15px;
+        min-width: 200px;
+        background-color: white;
+        border-radius: 12px 0 12px 12px;
+        border: 1px solid rgb(192, 192, 192);
+        transform-origin: top;
+        transform: scaleY(0.0);
+        opacity: 0;
+        transition: ease-out 0.3s transform;
+        transition-property: transform,opacity;
+    }
+
+    .menu-panel.menu-open .links{
+        transform: scaleY(1.0);
+        transition-timing-function: ease-in;
+        opacity: 1;
+    }
+
+    .links li{
+        padding: 6px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .links li:hover{
+        background-color: rgb(230, 230, 230);
+    }
+}
+
+@media screen and (min-width: 520px){
+    .auth-panel{
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+
+    .auth-panel li{
+        padding: 20px 25px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    .auth-panel .sign-up{
+        background-color:  #068465;
+        color: #FDFDFD;
+        border-radius: 12px;
+    }
+}
+
+@media screen and (min-width: 920px){
+    .menu-panel .auth-panel{
+        padding: 0;
+    }
+
+    .menu-panel{
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .menu-panel .links{
+        display: flex;
+        flex: auto 1 0;
+        padding-left: 20px;
+    }
+
+    .links li{
+        position:relative;
+        min-width: 100px;
+        padding: 20px 20px;
+        font-weight: 500;
+        text-align: center;
+        cursor: pointer;
+    }
+    .links li:hover{
+        font-weight: 700;
+    }
+    .links li:hover::after{
+        content: ' ';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        bottom: 2px;
+        left: 45%;
+        left: calc(50% - 5px);
+        background-color: #6A7E7F;
+        border-radius: 50%;
+    }
+
+
+}
