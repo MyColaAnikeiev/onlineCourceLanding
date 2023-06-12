@@ -1,34 +1,36 @@
-<header>
-    <div class="logo">
-        <span class="text">S</span>
-    </div>
-    <div class="menu-panel-wrapper">
-        <div 
-            class="menu-panel"
-            [class.menu-open]="menuOpen"
-        >
-            <ul class="links">
-                <li><a><span>Home</span></a></li>
-                <li><a><span>Curses</span></a></li>
-                <li><a><span>Mentor</span></a></li>
-                <li><a><span>Group</span></a></li>
-                <li><a><span>Testimonial</span></a></li>
-            </ul>
-            <ul class="auth-panel">
-                <li class="sign-in"><a><span>Sign</span></a></li>
-                <li class="sign-up"><a><span>Sign Up</span></a></li>
-            </ul>
+<div class="page-wrapper">
+    <header>
+        <div class="logo">
+            <span class="text">S</span>
         </div>
-    </div>
-    <div class="menu-btn-container">
-        <div 
-            class="menu-btn"
-            [class.menu-open]="menuOpen"
-        >
-            <img (click)="onMenuClick()"
-                src="assets/fontawesome/svg/bars.svg" 
-                alt="Menu"
+        <div class="menu-panel-wrapper">
+            <div 
+                class="menu-panel"
+                [class.menu-open]="menuOpen"
             >
+                <ul class="links">
+                    <li><a><span>Home</span></a></li>
+                    <li><a><span>Curses</span></a></li>
+                    <li><a><span>Mentor</span></a></li>
+                    <li><a><span>Group</span></a></li>
+                    <li><a><span>Testimonial</span></a></li>
+                </ul>
+                <ul class="auth-panel">
+                    <li class="sign-in"><a><span>Sign</span></a></li>
+                    <li class="sign-up"><a><span>Sign Up</span></a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</header>
+        <div class="menu-btn-container">
+            <div 
+                class="menu-btn"
+                [class.menu-open]="menuOpen"
+            >
+                <img (click)="onMenuClick()"
+                    src="assets/fontawesome/svg/bars.svg" 
+                    alt="Menu"
+                >
+            </div>
+        </div>
+    </header>
+</div>

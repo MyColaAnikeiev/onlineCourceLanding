@@ -1,45 +1,47 @@
-<section>
-    <div class="main-column">
-        <h1 class="headline">
-            Advance your<br>
-            <mark class="orange">engineering</mark><br>
-            skills with us
-        </h1>
+<div class="page-wrapper">
+    <section>
+        <div class="main-column">
+            <h1 class="headline">
+                Advance your<br>
+                <mark class="orange">engineering</mark><br>
+                skills with us
+            </h1>
 
-        <p class="hero-desc">Build skills with our courses and mentor from world-class companies.</p>
-        
-        <ul class="pros-list">
-            <li *ngFor="let pros of courseCons">
-                <img src="assets/img/checkbox.svg" class="icon">
-                <span>{{pros}}</span>
-            </li>
-        </ul>
+            <p class="hero-desc">Build skills with our courses and mentor from world-class companies.</p>
+            
+            <ul class="pros-list">
+                <li *ngFor="let pros of courseCons">
+                    <img src="assets/img/checkbox.svg" class="icon">
+                    <span>{{pros}}</span>
+                </li>
+            </ul>
 
-        <div class="dialog">
-            <div class="content">
-                <p class="msg">What do you learn today?</p>
-                <app-intro-accordion></app-intro-accordion>
-            </div>
-            <div class="button">
-                <a class="btn"><span>Start</span></a>
+            <div class="dialog">
+                <div class="content">
+                    <p class="msg">What do you learn today?</p>
+                    <app-intro-accordion></app-intro-accordion>
+                </div>
+                <div class="button">
+                    <a class="btn"><span>Start</span></a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="side-column">
-        <figure>
-            <img class="avatar" src="assets/img/man-with-laptop.png">
-            <div class="others">
-                <div class="mini-avatar">
-                    <img src="assets/img/miniava1.png">
+        <div class="side-column">
+            <figure>
+                <img class="avatar" src="assets/img/man-with-laptop.png">
+                <div class="others">
+                    <div class="mini-avatar">
+                        <img src="assets/img/miniava1.png">
+                    </div>
+                    <div class="mini-avatar">
+                        <img src="assets/img/miniava2.png">
+                    </div>
+                    <div class="mini-avatar">
+                        <img src="assets/img/miniava3.png">
+                    </div>
                 </div>
-                <div class="mini-avatar">
-                    <img src="assets/img/miniava2.png">
-                </div>
-                <div class="mini-avatar">
-                    <img src="assets/img/miniava3.png">
-                </div>
-            </div>
-        </figure>
-    </div>
-</section>
+            </figure>
+        </div>
+    </section>
+</div>
