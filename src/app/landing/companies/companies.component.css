@@ -1,0 +1,28 @@
+/*.container{
+    background-color: #F5F5F5;
+}*/
+
+section{
+    margin: 40px 0;
+}
+
+section h2{
+    font: 600 24px Inter;
+    margin: 40px 0;
+    color: #111416;
+
+}
+
+.companies{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 60px 48px;
+    justify-items: start;
+}
+
+@media screen and (min-width: 620px){
+    .container{
+        padding: 16px 0;
+        background-color: #F5F5F5;
+    }
+}
