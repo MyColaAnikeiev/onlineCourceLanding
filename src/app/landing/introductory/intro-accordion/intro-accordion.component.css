@@ -1,0 +1,30 @@
+.accordion .head{
+    display: flex;
+    margin: 12px 0;
+    align-items: center;
+    gap: 10px;
+    user-select: none;
+    cursor: pointer;
+}
+.accordion .head img{
+    flex: 0 0 auto;
+}
+.accordion .head span{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-gray8);
+}
+.accordion .body{
+    height: 0;
+    padding-left: 18px;
+    font-size: 0.9em;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+.accordion.open .body{
+    height: auto;
+    padding-bottom: 10px;
+}

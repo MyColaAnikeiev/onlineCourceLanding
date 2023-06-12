@@ -11,6 +11,7 @@ import { MentorsComponent } from './mentors/mentors.component';
 import { StudentsFeedbackComponent } from './students-feedback/students-feedback.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { FooterComponent } from './footer/footer.component';
+import { IntroAccordionComponent } from './introductory/intro-accordion/intro-accordion.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { FooterComponent } from './footer/footer.component';
     MentorsComponent,
     StudentsFeedbackComponent,
     NewsletterComponent,
-    FooterComponent
+    FooterComponent,
+    IntroAccordionComponent
   ]
 })
 export class LandingModule { }

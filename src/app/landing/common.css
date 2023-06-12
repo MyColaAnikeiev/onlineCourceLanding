@@ -1,9 +1,40 @@
 :host{
     --bg-color-primary: white;
     --bg-color-secondary:#F5F5F5;
+    --color-grey7: #2D2F30;
+    --color-grey8: #151617;
     font: 700 16px Inter;
 }
 
 *{
     box-sizing: border-box;
+}
+
+p{
+    font-family: Inter;
+    font-weight: 400;
+}
+
+
+.btn{
+    display: inline-flex;
+    min-width: 172px;
+    padding: 20px 25px;
+    font-family: Inter;
+    font-weight: 500;
+    font: 500 18px Inter;
+    background-color: #068465;
+    color: #FDFDFD;
+    border: 2px solid #068465;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #08a77f;
+}
+.btn:active{
+    border-color: #065e48;
 }

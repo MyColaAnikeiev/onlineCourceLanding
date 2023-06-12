@@ -1,4 +1,6 @@
-:host{
-    display: block;
+.page-container{
+    max-width: 1143px;
+    margin: 0 auto;
     padding: 22px;
+    padding: 22px calc(14px + 2vw);
 }

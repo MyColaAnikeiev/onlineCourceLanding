@@ -3,7 +3,9 @@
     list-style: none;
     padding: 0 10px;
     margin: 0;
+    user-select: none;
 }
+
 
 @media screen and (max-width: 520px) {
         
@@ -42,7 +44,7 @@
 
 
 
-@media screen and (min-width: 520px) and (max-width: 920px) {
+@media screen and (min-width: 520px) and (max-width: 919px) {
     .menu-panel .links{
         position: absolute;
         top: 46px;
@@ -85,20 +87,36 @@
     .auth-panel li{
         padding: 20px 25px;
         font-weight: 500;
+        border-radius: 12px;
+        text-align: center;
         cursor: pointer;
     }
+
+    .auth-panel .sign-in{
+        border: 1px solid transparent;
+    }
+    .auth-panel .sign-in:hover{
+        border-color: #eee;
+        color: #444;
+    }
+    .auth-panel .sign-in:active{
+        background-color: #eee;
+    }
     .auth-panel .sign-up{
-        background-color:  #068465;
+        background-color: #068465;
         color: #FDFDFD;
-        border-radius: 12px;
+        border: 2px solid #068465;
+        transition: background-color 0.2s ease;
+    }
+    .auth-panel .sign-up:hover{
+        background-color: #08a77f;
+    }
+    .auth-panel .sign-up:active{
+        border-color: #065e48;
     }
 }
 
 @media screen and (min-width: 920px){
-    .menu-panel .auth-panel{
-        padding: 0;
-    }
-
     .menu-panel{
         display: flex;
         align-items: flex-start;
@@ -133,5 +151,18 @@
         border-radius: 50%;
     }
 
+    .menu-panel .auth-panel{
+        padding: 0;
+    }
+    .auth-panel .sign-in, .auth-panel .sign-up{
+        min-width: 115px;
+        min-width: calc(22.422vw - 90.16px)
+    }
 
+}
+
+@media screen and (min-width: 1143px) {
+    .auth-panel .sign-in, .auth-panel .sign-up{
+        min-width: 165px;
+    }
 }
