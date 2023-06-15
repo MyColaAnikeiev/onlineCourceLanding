@@ -2,13 +2,13 @@ import { Component, Input } from '@angular/core';
 import { Course } from '../../shared/interfaces/course';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
+  selector: 'app-course-card',
+  templateUrl: './course-card.component.html',
   styleUrls: [
     '../../common.css',
-    './card.component.css'
+    './course-card.component.css'
   ]
 })
-export class CardComponent {
+export class CourseCardComponent {
   @Input('course-data') course!: Course;
 }

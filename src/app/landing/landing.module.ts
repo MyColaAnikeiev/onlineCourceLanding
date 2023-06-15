@@ -13,8 +13,8 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
 import { FooterComponent } from './footer/footer.component';
 import { IntroAccordionComponent } from './introductory/intro-accordion/intro-accordion.component';
 import { TabsComponent } from './courses/tabs/tabs.component';
-import { CardComponent } from './courses/card/card.component';
-import { BgImageDirective } from './courses/card/bg-image.directive';
+import { CourseCardComponent } from './courses/course-card/course-card.component';
+import { BgImageDirective } from './courses/course-card/bg-image.directive';
 
 
 @NgModule({
@@ -34,7 +34,7 @@ import { BgImageDirective } from './courses/card/bg-image.directive';
     FooterComponent,
     IntroAccordionComponent,
     TabsComponent,
-    CardComponent,
+    CourseCardComponent,
     BgImageDirective
   ]
 })
