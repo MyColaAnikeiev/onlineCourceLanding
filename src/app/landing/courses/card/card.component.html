@@ -1,0 +1,17 @@
+<div [appBgImage]="course.image" class="card">
+    <div class="top-overlay"></div>
+    <div class="info">
+        <span class="category small-label">{{ course.category }}</span>
+        <div class="price big-label">${{course.price}}</div>
+        <h2 class="course-name big-label">{{ course.name }}</h2>
+        <span class="course-duration small-label">{{ course.numberOfClasses }} Classes</span>
+        <span 
+            *ngIf="course.studentGroupSize !== undefined"
+            class="num-of-students small-label"
+        >{{ course.studentGroupSize }} Students</span>
+        <div class="rating">
+            <img src="assets/img/star.svg">
+            <span class="number">{{ course.rating }}</span>
+        </div>
+    </div>
+</div>

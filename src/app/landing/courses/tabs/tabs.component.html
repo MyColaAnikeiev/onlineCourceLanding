@@ -1,0 +1,12 @@
+<div>
+    <div class="tabs">
+        <div 
+            *ngFor="let tab of tabs" 
+            class="tab"
+            [class.selected]="tab == current"
+            (click)="select(tab)"
+        >
+            <span>{{tab}}</span>
+        </div>
+    </div>
+</div>

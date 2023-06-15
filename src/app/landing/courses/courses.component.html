@@ -1,1 +1,13 @@
-<p>courses works!</p>
+<div class="page-wrapper">
+    <section>
+        <h2 class="title mobile-section-title">Popular courses</h2>
+        <app-tabs></app-tabs>
+        <div class="card-container">
+            <app-card 
+                *ngFor="let course of courses"
+                [course-data]="course"
+            ></app-card>
+        </div>
+        <a href="#" class="btn"><span>Explore classes</span></a>
+    </section>
+</div>

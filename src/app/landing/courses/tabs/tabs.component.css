@@ -1,0 +1,32 @@
+.tabs{
+    display: inline-flex;
+    padding: 4px;
+    background-color: #F0F0F0;
+    border-radius: 36px;
+    user-select: none;
+}
+.tab{
+    min-width: 47px;
+    padding: 12px 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 36px;
+    cursor: pointer;
+}
+.tab:hover{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+    background-color: #F8F8F8;
+}
+.tab.selected{
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+}
+
+@media screen and (min-width: 370px){
+    .tab{
+        min-width: 60px;
+    }
+}

@@ -1,0 +1,57 @@
+section .title{
+    margin-bottom: 24px;
+}
+
+.card-container{
+    display: flex;
+    margin: 24px 0;
+    gap: 25px;
+    overflow-x: scroll;
+}
+
+@media screen and (min-width: 390px){
+    h2.title{
+        font-size: calc(4.88vw + 4.98px);
+    }
+}
+
+@media screen and (min-width: 650px){
+    section{
+        display: grid;
+        grid-template:
+            "title btn"
+            "tabs btn"
+            "cards cards" 
+            / 1fr 196px;
+    }
+
+    h2{
+        grid-area: title;
+    }
+    app-tabs{
+        grid-area: tabs;
+    }
+    .card-container{
+        grid-area: cards;
+    }
+    .btn{
+        grid-area: btn;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 1209px){
+    .card-container{
+        margin-right: calc(-14px - 2vw);
+    }
+}
+@media screen and (min-width: 1210px){
+    .card-container{
+        overflow: visible;
+    }
+    h2.title{
+        font-size: 64px;
+        font-weight: 700;
+    }
+
+}

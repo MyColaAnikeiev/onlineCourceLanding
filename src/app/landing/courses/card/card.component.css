@@ -1,0 +1,55 @@
+.card{
+    width: 263px;
+    border-radius: 10px;
+    background-color: #C4C4C4;
+    background-size: 100%;
+
+}
+
+.top-overlay{
+    height: 265px;
+}
+
+.info{
+    display: grid;
+    padding: 0 15px 0 10.5px;
+    grid-template: 
+        "category category price" 35px 
+        "name name name" 44px
+        "classes students rating" 35px
+       /  1fr 1.3fr 1fr;
+    align-items: center;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--color-green1);
+}
+
+.small-label{
+    font: 500 12px Inter;
+}
+.big-label{
+    font: 700 18px Inter;
+}
+
+.category{
+    grid-area: category;
+}
+.price{
+    grid-area: price;
+    justify-self: end;
+}
+.course-name{
+    grid-area: name;
+    padding-right: 15px;
+}
+.course-duration{
+    grid-area: classes;
+}
+.num-of-students{
+    grid-area: students
+}
+.rating{
+    font: 700 10px Inter;
+    grid-area: rating;
+    justify-self: end;
+}

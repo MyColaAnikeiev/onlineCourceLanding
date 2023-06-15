@@ -3,6 +3,7 @@
     --bg-color-secondary:#F5F5F5;
     --color-grey7: #2D2F30;
     --color-grey8: #151617;
+    --color-green1: #068465;
     font: 700 16px Inter;
 }
 
@@ -16,6 +17,7 @@ p{
 }
 
 .page-wrapper{
+    box-sizing: content-box;
     max-width: 1143px;
     margin: 0 auto;
     padding: 0 22px;
@@ -29,13 +31,14 @@ p{
     font-family: Inter;
     font-weight: 500;
     font: 500 18px Inter;
-    background-color: #068465;
+    background-color: var(--color-green1);
     color: #FDFDFD;
-    border: 2px solid #068465;
+    border: 2px solid var(--color-green1);
     justify-content: center;
     align-items: center;
     transition: background-color 0.2s ease;
     border-radius: 12px;
+    text-decoration: none;
     cursor: pointer;
 }
 .btn:hover{
@@ -43,4 +46,10 @@ p{
 }
 .btn:active{
     border-color: #065e48;
+}
+
+.mobile-section-title{
+    font: 600 24px Inter;
+    margin: 40px 0;
+    color: #111416;
 }

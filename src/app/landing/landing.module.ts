@@ -12,6 +12,9 @@ import { StudentsFeedbackComponent } from './students-feedback/students-feedback
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { FooterComponent } from './footer/footer.component';
 import { IntroAccordionComponent } from './introductory/intro-accordion/intro-accordion.component';
+import { TabsComponent } from './courses/tabs/tabs.component';
+import { CardComponent } from './courses/card/card.component';
+import { BgImageDirective } from './courses/card/bg-image.directive';
 
 
 @NgModule({
@@ -29,7 +32,10 @@ import { IntroAccordionComponent } from './introductory/intro-accordion/intro-ac
     StudentsFeedbackComponent,
     NewsletterComponent,
     FooterComponent,
-    IntroAccordionComponent
+    IntroAccordionComponent,
+    TabsComponent,
+    CardComponent,
+    BgImageDirective
   ]
 })
 export class LandingModule { }
