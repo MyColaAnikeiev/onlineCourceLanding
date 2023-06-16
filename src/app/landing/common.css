@@ -48,6 +48,10 @@ p{
     border-color: #065e48;
 }
 
+.hidden{
+    display: none;
+}
+
 .section-title-small{
     font: 600 24px Inter;
     margin: 40px 0 24px 0;

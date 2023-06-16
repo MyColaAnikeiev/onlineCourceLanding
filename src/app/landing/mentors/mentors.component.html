@@ -1,1 +1,18 @@
-<p>mentors works!</p>
+<div class="page-wrapper">
+    <section>
+        <div class="top">
+            <h2 class="title section-title-small section-title-grow">
+                Meet with our <br class="hidden">mentor
+            </h2>
+            <a class="hidden btn more-btn" href="#">
+                <span>Explore <strong>10+</strong> our Mentors</span>
+            </a>
+        </div>
+        <div class="mentors">
+            <app-mentor-card
+                *ngFor="let mentor of mentors"
+                [mentor]="mentor"
+            ></app-mentor-card>
+        </div>
+    </section>
+</div>

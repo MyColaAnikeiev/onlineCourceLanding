@@ -15,6 +15,7 @@ import { IntroAccordionComponent } from './introductory/intro-accordion/intro-ac
 import { TabsComponent } from './courses/tabs/tabs.component';
 import { CourseCardComponent } from './courses/course-card/course-card.component';
 import { BgImageDirective } from './courses/course-card/bg-image.directive';
+import { MentorCardComponent } from './mentors/mentor-card/mentor-card.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { BgImageDirective } from './courses/course-card/bg-image.directive';
     IntroAccordionComponent,
     TabsComponent,
     CourseCardComponent,
-    BgImageDirective
+    BgImageDirective,
+    MentorCardComponent
   ]
 })
 export class LandingModule { }
