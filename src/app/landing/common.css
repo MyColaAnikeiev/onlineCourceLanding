@@ -48,8 +48,21 @@ p{
     border-color: #065e48;
 }
 
-.mobile-section-title{
+.section-title-small{
     font: 600 24px Inter;
-    margin: 40px 0;
+    margin: 40px 0 24px 0;
     color: #111416;
+}
+
+@media screen and (min-width: 390px){
+    .section-title-grow{
+        font-size: calc(4.88vw + 4.98px);
+    }
+}
+@media screen and (min-width: 1210px){
+    .section-title-grow{
+        font-size: 64px;
+        font-weight: 700;
+    }
+
 }

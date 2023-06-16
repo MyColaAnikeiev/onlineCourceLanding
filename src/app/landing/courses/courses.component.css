@@ -1,18 +1,8 @@
-section .title{
-    margin-bottom: 24px;
-}
-
 .card-container{
     display: flex;
     margin: 24px 0;
     gap: 25px;
     overflow-x: scroll;
-}
-
-@media screen and (min-width: 390px){
-    h2.title{
-        font-size: calc(4.88vw + 4.98px);
-    }
 }
 
 @media screen and (min-width: 650px){
@@ -49,9 +39,4 @@ section .title{
     .card-container{
         overflow: visible;
     }
-    h2.title{
-        font-size: 64px;
-        font-weight: 700;
-    }
-
 }
