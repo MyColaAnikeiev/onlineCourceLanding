@@ -3,7 +3,8 @@
     border-radius: 10px;
     background-color: #C4C4C4;
     background-size: 100%;
-
+    color: #101010;
+    cursor: pointer;
 }
 
 .top-overlay{
@@ -20,8 +21,19 @@
        /  1fr 1.3fr 1fr;
     align-items: center;
     border-radius: 10px;
+    background-color: #FDFDFD;
+    box-shadow: 0px 8px 100px rgba(65, 65, 65, 0.2);
+}
+
+.card:hover{
     color: white;
+}
+.card:hover .top-overlay{
+    background-color: rgba(131, 131, 131, 0.117);
+}
+.card:hover .info{
     background-color: var(--color-green1);
+    box-shadow: none;
 }
 
 .small-label{
@@ -33,7 +45,12 @@
 
 .category{
     grid-area: category;
+    color: #414141;
 }
+.card:hover .category{
+    color: white;
+}
+
 .price{
     grid-area: price;
     justify-self: end;
@@ -42,9 +59,15 @@
     grid-area: name;
     padding-right: 15px;
 }
+
 .course-duration{
     grid-area: classes;
+    color: #414141;
 }
+.card:hover .course-duration{
+    color: white;
+}
+
 .num-of-students{
     grid-area: students
 }
