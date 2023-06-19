@@ -1,0 +1,62 @@
+:host{
+    max-width: 510px;
+}
+
+.card{
+    position:relative;
+    padding: 40px 34px 30px 34px;
+    margin-right: 2px;
+    background-color: #EAFFFA;
+    border-radius: 10px;
+}
+
+.decoration{
+    position: absolute;
+    top: -19px;
+    right: -18px;
+    width: 69px;
+    height: 61px;
+    background-image: url("src/assets/img/double-quotes.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.top{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 18px;
+}
+
+.avatar{
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex: 0 0 auto;
+}
+
+.credentials{
+    flex: 1 0 0;
+    align-self: flex-end;
+}
+
+.name{
+    font: 700 20px Inter;
+    color: #101010;
+    line-height: 30px;
+}
+
+.institution{
+    font: 400 12px Inter;
+    color: #090001;
+    line-height: 25px;
+}
+
+.msg{
+    font: 400 14px Inter;
+    letter-spacing: 0.5px;
+    font-feature-settings: 'salt' on;
+    line-height: 20px;
+    color: #090001;
+
+}

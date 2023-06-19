@@ -1,1 +1,11 @@
-<p>students-feedback works!</p>
+<div class="page-wrapper">
+    <h2 class="section-title-small section-title-grow">
+        What our students say
+    </h2>
+    <div class="cards">
+        <app-student-feedback-card
+            *ngFor="let student of studentFeedbacks"
+            [student-feedback]="student"
+        ></app-student-feedback-card>
+    </div>
+</div>
