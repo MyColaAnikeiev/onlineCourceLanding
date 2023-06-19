@@ -16,6 +16,7 @@ import { TabsComponent } from './courses/tabs/tabs.component';
 import { CourseCardComponent } from './courses/course-card/course-card.component';
 import { BgImageDirective } from './courses/course-card/bg-image.directive';
 import { MentorCardComponent } from './mentors/mentor-card/mentor-card.component';
+import { DragScrollLeftDirective } from './shared/directories/drag-scroll-left.directive';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { MentorCardComponent } from './mentors/mentor-card/mentor-card.component
     TabsComponent,
     CourseCardComponent,
     BgImageDirective,
-    MentorCardComponent
+    MentorCardComponent,
+    DragScrollLeftDirective
   ]
 })
 export class LandingModule { }

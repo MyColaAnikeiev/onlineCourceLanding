@@ -2,7 +2,7 @@
     <section>
         <h2 class="section-title-small section-title-grow">Popular courses</h2>
         <app-tabs></app-tabs>
-        <div class="card-container">
+        <div appDragScrollLeft class="card-container">
             <app-course-card 
                 *ngFor="let course of courses"
                 [course-data]="course"

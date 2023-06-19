@@ -1,8 +1,17 @@
+:host{
+    display: block;
+    overflow: hidden;
+    padding-bottom: 100px;
+    margin-bottom: -100px;
+}
+
 .card-container{
+    width: fit-content;
+    position: relative;
     display: flex;
     margin: 24px 0;
     gap: 25px;
-    overflow-x: scroll;
+    user-select: none;
 }
 
 @media screen and (min-width: 650px){
@@ -27,16 +36,5 @@
     .btn{
         grid-area: btn;
         align-self: center;
-    }
-}
-
-@media screen and (max-width: 1209px){
-    .card-container{
-        margin-right: calc(-14px - 2vw);
-    }
-}
-@media screen and (min-width: 1210px){
-    .card-container{
-        overflow: visible;
     }
 }
