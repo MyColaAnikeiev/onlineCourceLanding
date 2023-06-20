@@ -1,0 +1,222 @@
+:host{
+    color: white;
+}
+
+footer{
+    padding-top: 15px;
+    padding-bottom: 1px;
+    background-color: var(--color-green1);
+}
+
+.title-and-links{
+    margin-bottom: 30px;
+}
+
+.title{
+    margin: 24px 0;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.list li{
+    margin: 12px 0;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.email-subscription{
+    margin: 30px 0 38px 0;
+}
+.email-subscription .form{
+    display: flex;
+    height: 40px;
+    max-width: 255px;
+    background-color: #fdfdfd33;
+    border-radius: 8px;
+    align-items: center;
+}
+.email-subscription .form input{
+    width: 0;
+    padding: 0 10px 0 26px;
+    flex: 1 0 0;
+    font-size: 14px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #ffffff;
+}
+.email-subscription .form input::placeholder{
+    color: #FDFDFD;
+    font-size: 14px;
+}
+.email-subscription .form button{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition-property: transform, scale;
+    transition-duration: 200ms;
+    transform: rotate(0) scale(1.0);
+}
+.email-subscription .form button:hover{
+    transform: rotate(10deg) scale(1.15);
+}
+.email-subscription .form button:active{
+    transform: rotate(10deg) scale(1.5);
+}
+
+
+.logo-and-media .logo{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+.logo-image{
+    flex-grow: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #006149;;
+    border-radius: 8px;
+    user-select: none;
+}
+.logo-image .text{
+    display: flex;
+    height: 100%;
+    padding-bottom: 2px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+.logo-text{
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #FDFDFD;
+}
+.logo-and-media > p{
+    margin: 27px 0;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+}
+
+.social-media a{
+    display: inline-block;
+    margin-right: 16px;
+    padding: 5.6px;
+    background-color: #fdfdfd19;
+    line-height: 0;
+    border-radius: 50%;
+}
+.social-media a img{
+    display: inline-block;
+    width: 12.8px;
+    height: 12.8px;
+    object-fit: contain;
+}
+
+.caption{
+    margin: 30px 0 43px 0;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FDFDFD;
+}
+
+
+@media screen and (min-width: 480px){
+    footer{
+        padding-top: 25px;
+    }
+
+    .company{
+        grid-area: company;
+    }
+    .support{
+        grid-area: support;
+    }
+    .email-subscription{
+        grid-area: subscription;;
+    }
+    .logo-and-media{
+        grid-area: logo;
+    }
+    .caption{
+        grid-area: caption;
+        justify-self: center;
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template: 
+            "company support" auto
+            "logo logo" auto
+            "subscription subscription" auto
+            "caption caption" auto
+            / 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 640px){
+    .grid-container{
+        display: grid;
+        grid-template: 
+            "company support" auto
+            "logo subscription" auto
+            "caption caption" auto
+            / 1fr 1fr;
+    }
+}
+
+
+@media screen and (min-width: 1050px){
+    footer{
+        padding-top: 108px;
+    }
+
+    .title{
+        margin-top: 0;
+    }
+    .email-subscription{
+        margin-top: 0;
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template: 
+            "logo company support subscription" auto
+            "caption caption caption caption" auto
+            / 1.3fr 160px 160px 1fr;
+    }
+}
