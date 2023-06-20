@@ -1,0 +1,80 @@
+section{
+    margin: 20px 0 72px 0;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.newsletter{
+    flex-grow: 1;
+}
+.newsletter .title{
+    font: 700 32px Inter;
+    line-height: 52px;
+    letter-spacing: 1px;
+    color: #101010;
+}
+.newsletter > p{
+    max-width: 430px;
+    font: 400 20px Inter;
+    line-height: 36px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+.newsletter .form{
+    display: flex;
+    margin: 16px 0 24px 0;
+    gap: 6px;
+}
+.newsletter .form input{
+    width: 167px;
+    width: 48.3%;
+    min-width: 167px;
+    max-width: 276px;
+    flex: 0 0 auto;
+}
+.newsletter .form button{
+    width: 108px;
+    width: 31.2%;
+    max-width: 173px;
+    min-width: 108px;
+    flex: 0 0 auto; 
+}
+
+.illustration{
+    position: relative;
+    /*margin: 0 auto;*/
+    max-width: 560px;
+}
+.illustration > img{
+  width: 100%;
+
+}
+.illustration .decoration{
+    position: absolute;
+    right: 16%;
+    bottom: -55px;
+    display: flex;
+    width: 114px;
+    height: 116px;
+    background: #078465;
+    transform: matrix(0.91, 0.41, -0.39, 0.92, 0, 0);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.illustration .decoration p{
+    padding-bottom: 7px;
+    font: 700 14px Inter;
+    line-height: 18px;
+    text-align: center;
+    color: #FAFAF9;
+}
+
+
+@media screen and (min-width: 920px){
+    section{
+        margin-top: 96px;
+        margin-bottom: 120px;
+        display: flex;
+    }
+}

@@ -48,6 +48,18 @@ p{
     border-color: #065e48;
 }
 
+input{
+    height: 69px;
+    padding: 16px;
+    font: 400 20px Inter;
+    font-style: normal;
+    letter-spacing: 1px;
+    color: #B5B5B5;
+    background-color: #FDFDFD;
+    border: 1px solid #E2E2E2;
+    border-radius: 10px;
+}
+
 .hidden{
     display: none;
 }
