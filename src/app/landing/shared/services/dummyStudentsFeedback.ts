@@ -1,4 +1,4 @@
-import { StudentFeedback } from "../shared/interfaces/student-feedback";
+import { StudentFeedback } from "../interfaces/student-feedback";
 
 export const dummyStutendsFeedback: StudentFeedback[] = [
     {
