@@ -9,15 +9,19 @@
                 [class.menu-open]="menuOpen"
             >
                 <ul class="links">
-                    <li><a><span>Home</span></a></li>
-                    <li><a><span>Curses</span></a></li>
-                    <li><a><span>Mentor</span></a></li>
-                    <li><a><span>Group</span></a></li>
-                    <li><a><span>Testimonial</span></a></li>
+                    <li><a href="#"><span>Home</span></a></li>
+                    <li><a href="#"><span>Curses</span></a></li>
+                    <li><a href="#"><span>Mentor</span></a></li>
+                    <li><a href="#"><span>Group</span></a></li>
+                    <li><a href="#"><span>Testimonial</span></a></li>
                 </ul>
                 <ul class="auth-panel">
-                    <li class="sign-in"><a><span>Sign</span></a></li>
-                    <li class="sign-up"><a><span>Sign Up</span></a></li>
+                    <a routerLink="login">
+                        <li class="sign-in"><span>Sign</span></li>
+                    </a>
+                    <a routerLink="registration">
+                        <li class="sign-up"><span>Sign Up</span></li>
+                    </a>
                 </ul>
             </div>
         </div>

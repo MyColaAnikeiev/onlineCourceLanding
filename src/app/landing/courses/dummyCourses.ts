@@ -4,6 +4,7 @@ export const dummyCourses: Course[] = [
     {
       category: "Fullstack",
       name: "Fullstack Modern Javascript",
+      href: '#',
       image: "assets/img/card1.jpg",
       price: 20,
       numberOfClasses: 12,
@@ -13,6 +14,7 @@ export const dummyCourses: Course[] = [
     {
       category: "Frontend",
       name: "Design System with React",
+      href: '#',
       image: "assets/img/card2.jpg",
       price: 20,
       numberOfClasses: 12,
@@ -21,6 +23,7 @@ export const dummyCourses: Course[] = [
     {
       category: "UI/UX Design",
       name: "Design Banner with Figma",
+      href: '#',
       image: "assets/img/card3.jpg",
       price: 11,
       numberOfClasses: 12,
@@ -29,6 +32,7 @@ export const dummyCourses: Course[] = [
     {
       category: "Graphic Design",
       name: "Graphic design with Figma",
+      href: '#',
       image: "assets/img/card4.jpg",
       price: 20,
       numberOfClasses: 12,

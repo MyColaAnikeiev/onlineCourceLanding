@@ -1,4 +1,5 @@
 export interface Course {
+    href: string,
     category: string,
     name: string,
     image: string,
