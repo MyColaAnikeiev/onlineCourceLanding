@@ -1,10 +1,10 @@
-import { AfterViewInit, Directive, ElementRef, HostBinding, HostListener, OnDestroy } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Directive, ElementRef, HostBinding, HostListener, Input, OnDestroy } from '@angular/core';
 
 
 @Directive({
   selector: '[appDragScrollLeft]'
 })
-export class DragScrollLeftDirective implements AfterViewInit, OnDestroy{
+export class DragScrollLeftDirective implements AfterViewInit, AfterViewChecked, OnDestroy{
 
   dragging = false
   lastClientX = 0
@@ -15,10 +15,25 @@ export class DragScrollLeftDirective implements AfterViewInit, OnDestroy{
 
   intervalId: ReturnType<typeof setInterval> | null = null
 
+  /**
+   * Any value that change any time content changes.
+   */
+  contentChanged = false
+  @Input('contentHash') set contentHash (obj: any){
+    this.contentChanged = true
+  }
+
   constructor(private elm: ElementRef) { }
 
   ngAfterViewInit(): void {
     this.calcMaxShift()
+  }
+
+  ngAfterViewChecked(): void {
+    if(this.contentChanged){
+      this.calcMaxShift()
+      this.contentChanged = false;
+    }
   }
 
   @HostBinding('style.left') left = '0'
@@ -26,6 +41,8 @@ export class DragScrollLeftDirective implements AfterViewInit, OnDestroy{
   @HostListener('window:resize') 
   onResize(){
     this.calcMaxShift()
+    this.leftShift = Math.min(this.leftShift, this.maxLeftShift)
+    this.setScrollLeft(this.leftShift)
   }
 
   @HostListener('mousedown', ['$event.clientX']) 
