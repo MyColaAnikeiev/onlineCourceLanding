@@ -1,4 +1,4 @@
-import { Course } from "../shared/interfaces/course";
+import { Course } from "../interfaces/course";
 
 export const dummyCourses: Course[] = [
     {
