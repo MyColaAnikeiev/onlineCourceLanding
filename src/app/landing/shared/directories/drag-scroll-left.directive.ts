@@ -4,7 +4,7 @@ import { AfterViewChecked, AfterViewInit, Directive, ElementRef, HostBinding, Ho
 @Directive({
   selector: '[appDragScrollLeft]'
 })
-export class DragScrollLeftDirective implements AfterViewInit, AfterViewChecked, OnDestroy{
+export class DragScrollLeftDirective implements AfterViewInit, AfterViewChecked{
 
   dragging = false
   lastClientX = 0
@@ -12,8 +12,12 @@ export class DragScrollLeftDirective implements AfterViewInit, AfterViewChecked,
   maxLeftShift = 0
 
   touchId = 0
-
-  intervalId: ReturnType<typeof setInterval> | null = null
+  
+  /**
+   * minimum number of pixels to scroll in order to prevent link clicking
+   */
+  clickPreventingThreshold = 5
+  lastMoveDiff = 0
 
   /**
    * Any value that change any time content changes.
@@ -45,10 +49,20 @@ export class DragScrollLeftDirective implements AfterViewInit, AfterViewChecked,
     this.setScrollLeft(this.leftShift)
   }
 
+  @HostListener('click')
+  onClick(){
+    if(Math.abs(this.lastMoveDiff) >= this.clickPreventingThreshold){
+      return false
+    }
+    return true
+  }
+
   @HostListener('mousedown', ['$event.clientX']) 
   dragStart(clientX: number){
     this.lastClientX = clientX;
     this.dragging = true;
+    this.lastMoveDiff = 0
+    return false
   }
 
   @HostListener('touchstart', ['$event'])
@@ -65,6 +79,7 @@ export class DragScrollLeftDirective implements AfterViewInit, AfterViewChecked,
   dragEnd(){
     this.dragging = false
     this.leftShift = Math.max(-this.maxLeftShift, Math.min(0, this.leftShift))
+    return false
   }
 
   @HostListener('window:touchend', ['$event'])
@@ -118,17 +133,12 @@ export class DragScrollLeftDirective implements AfterViewInit, AfterViewChecked,
     this.lastClientX = clientX
     this.leftShift += diff
     this.setScrollLeft(this.leftShift)
+    this.lastMoveDiff += diff
   }
 
   calcMaxShift(): void{
     const contentContainer = (<HTMLElement>this.elm.nativeElement)
     const hostContainer = contentContainer.parentElement
     this.maxLeftShift = Math.max(0, contentContainer.offsetWidth - hostContainer!.offsetWidth)
-  }
-
-  ngOnDestroy(): void {
-    if(this.intervalId !== null){
-      clearInterval(this.intervalId)
-    }
   }
 }
