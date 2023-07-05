@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { StudentsFeedbackService } from '../shared/services/students-feedback.service';
 import { StudentFeedback } from '../shared/interfaces/student-feedback';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-students-feedback',
@@ -11,15 +12,12 @@ import { StudentFeedback } from '../shared/interfaces/student-feedback';
   ]
 })
 export class StudentsFeedbackComponent implements OnInit{
-  studentFeedbacks: StudentFeedback[] = []
+  studentFeedbacks$: Observable<StudentFeedback[]> | undefined = undefined
 
   constructor(private feedbackService: StudentsFeedbackService){}
 
   ngOnInit(): void {
-    this.feedbackService.getFeedbacks()
-      .subscribe(feedbacks => {
-        this.studentFeedbacks = feedbacks
-      })
-      
+    this.studentFeedbacks$ = this.feedbackService.getFeedbacks()
   }
+
 }
