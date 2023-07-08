@@ -1,1 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Raleway:wght@700&display=swap');
+@font-face {
+    font-family: Inter;
+    src: url('src/assets/fonts/Inter-VariableFont_slnt,wght.ttf');
+}
+@font-face {
+    font-family: Raleway;
+    font-style: normal;
+    src: url('src/assets/fonts/Raleway-VariableFont_wght.ttf')
+}
+@font-face {
+    font-family: Raleway;
+    font-style: italic;
+    src: url('src/assets/fonts/Raleway-Italic-VariableFont_wght.ttf')
+}
