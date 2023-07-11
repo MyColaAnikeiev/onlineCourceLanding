@@ -1,6 +1,6 @@
 import { StudentFeedback } from "../interfaces/student-feedback";
 
-export const dummyStutendsFeedback: StudentFeedback[] = [
+export const mockStutendsFeedback: StudentFeedback[] = [
     {
         img: "assets/img/student1.jpg",
         name: "Sulastri",

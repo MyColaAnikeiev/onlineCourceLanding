@@ -1,6 +1,6 @@
 import { Course } from "../interfaces/course";
 
-export const dummyCourses: Course[] = [
+export const mockCourses: Course[] = [
     {
       category: "Fullstack",
       name: "Fullstack Modern Javascript",

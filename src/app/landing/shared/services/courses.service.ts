@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, delay, of } from 'rxjs';
 import { Course } from '../interfaces/course';
-import { dummyCourses } from './dummyCourses';
+import { mockCourses } from './mockCourses';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class CoursesService {
   }
 
   getCourses(technology: string): Observable<Course[]>{
-    return of(dummyCourses).pipe(delay(50))
+    return of(mockCourses).pipe(delay(50))
   }
 
   constructor() { }

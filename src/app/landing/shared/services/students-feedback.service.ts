@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, delay, of } from 'rxjs';
-import { dummyStutendsFeedback } from './dummyStudentsFeedback';
+import { mockStutendsFeedback } from './mockStudentsFeedback';
 import { StudentFeedback } from '../interfaces/student-feedback';
 
 @Injectable({
@@ -9,7 +9,7 @@ import { StudentFeedback } from '../interfaces/student-feedback';
 export class StudentsFeedbackService {
 
   getFeedbacks(): Observable<StudentFeedback[]>{
-    return of(dummyStutendsFeedback).pipe(delay(50))
+    return of(mockStutendsFeedback).pipe(delay(50))
   }
 
   constructor() { }
