@@ -6,10 +6,7 @@ import { map, of, switchMap, tap } from 'rxjs';
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
-  styleUrls: [
-    '../common.css',
-    './courses.component.css'
-  ]
+  styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent implements OnInit{
   tabs: string[] = []

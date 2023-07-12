@@ -6,10 +6,7 @@ import { Observable, Subscription } from 'rxjs';
 @Component({
   selector: 'app-students-feedback',
   templateUrl: './students-feedback.component.html',
-  styleUrls: [
-    '../common.css',
-    './students-feedback.component.css'
-  ]
+  styleUrls: ['./students-feedback.component.css']
 })
 export class StudentsFeedbackComponent implements OnInit{
   studentFeedbacks$: Observable<StudentFeedback[]> | undefined = undefined

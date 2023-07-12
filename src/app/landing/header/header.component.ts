@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: [
-    '../common.css',
     './header.component.css',
     './header.component.menu.css'
   ]
