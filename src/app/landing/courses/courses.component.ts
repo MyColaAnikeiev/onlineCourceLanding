@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Course } from '../shared/interfaces/course';
-import { CoursesService } from '../shared/services/courses.service';
+import { CoursesService } from './courses.service';
 import { map, of, switchMap, tap } from 'rxjs';
 
 @Component({

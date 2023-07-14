@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { StudentsFeedbackService } from '../shared/services/students-feedback.service';
+import { StudentsFeedbackService } from './students-feedback.service';
 import { StudentFeedback } from '../shared/interfaces/student-feedback';
 import { Observable, Subscription } from 'rxjs';
 

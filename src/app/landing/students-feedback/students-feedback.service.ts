@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, delay, of } from 'rxjs';
-import { mockStutendsFeedback } from './mockStudentsFeedback';
-import { StudentFeedback } from '../interfaces/student-feedback';
+import { mockStutendsFeedback } from '../shared/services/mockStudentsFeedback';
+import { StudentFeedback } from '../shared/interfaces/student-feedback';
 
 @Injectable({
   providedIn: 'root'
