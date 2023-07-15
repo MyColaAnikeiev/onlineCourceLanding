@@ -1,6 +1,6 @@
-import { Mentor } from "../shared/interfaces/mentor";
+import { Mentor } from "../interfaces/mentor";
 
-export const dummyMentors: Mentor[] = [
+export const mockMentors: Mentor[] = [
     {
         url: '#',
         imgSrc: 'assets/img/mentor1.jpg',
