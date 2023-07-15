@@ -1,20 +1,31 @@
-import { Injectable } from '@angular/core';
-import { Observable, delay, of } from 'rxjs';
-import { Course } from '../shared/interfaces/course';
-import { mockCourses } from '../shared/services/mockCourses';
+import { Inject, Injectable } from '@angular/core';
+import { Observable, map } from 'rxjs';
+import { Course, CoursesRepository } from '../shared/interfaces/course';
+import { RepositoryService } from '../shared/services/repository.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoursesService {
 
+  constructor(@Inject(RepositoryService) private repo: CoursesRepository){}
+
   getListOfTechnologies(): Observable<string[]> {
-    return of(['Web', 'Mobile', 'Data', 'Cloud'])
+    return this.repo.getCourses().pipe(
+      map(courses => Object.keys(courses))
+    )
   }
 
   getCourses(technology: string): Observable<Course[]>{
-    return of(mockCourses).pipe(delay(50))
+    return this.repo.getCourses().pipe(
+      map(courses => {
+        if(technology in courses){
+          return courses[technology]
+        }else{
+          return []
+        }
+      })
+    )
   }
 
-  constructor() { }
 }

@@ -1,16 +1,17 @@
-import { Injectable } from '@angular/core';
-import { Observable, delay, of } from 'rxjs';
-import { mockStutendsFeedback } from '../shared/services/mockStudentsFeedback';
-import { StudentFeedback } from '../shared/interfaces/student-feedback';
+import { Inject, Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { StudentFeedback, StudentFeedbacksRepository } from '../shared/interfaces/student-feedback';
+import { RepositoryService } from '../shared/services/repository.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StudentsFeedbackService {
 
+  constructor(@Inject(RepositoryService) private repo: StudentFeedbacksRepository){}
+
   getFeedbacks(): Observable<StudentFeedback[]>{
-    return of(mockStutendsFeedback).pipe(delay(50))
+    return this.repo.getStudentFeedbacks()
   }
 
-  constructor() { }
 }
