@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./companies.component.css']
 })
 export class CompaniesComponent {
-
+  logoFiles = [
+    'com_airbnb.svg',
+    'com_hubspot.svg',
+    'com_google.svg',
+    'com_microsoft.svg',
+    'com_walmart.svg',
+    'com_fedex.svg'
+  ]
 }

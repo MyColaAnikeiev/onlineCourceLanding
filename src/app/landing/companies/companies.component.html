@@ -4,12 +4,7 @@
             <h2 class="section-title-small">Trusted by companies of all sizes</h2>
 
             <div class="companies">
-                <img src="assets/img/com_airbnb.svg">
-                <img src="assets/img/com_hubspot.svg">
-                <img src="assets/img/com_google.svg">
-                <img src="assets/img/com_microsoft.svg">
-                <img src="assets/img/com_walmart.svg">
-                <img src="assets/img/com_fedex.svg">
+                <img *ngFor="let logoFile of logoFiles" [src]="'assets/img/' + logoFile">
             </div>
         </section>
     </div>
