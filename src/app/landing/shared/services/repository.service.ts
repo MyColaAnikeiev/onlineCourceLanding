@@ -14,9 +14,9 @@ export class RepositoryService implements
     MentorsRepository,
     OnDestroy
 {
-    private coursesCache: Observable<CoursesByTechnology> | null = null
-    private studentsFeedbackCache: Observable<StudentFeedback[]> | null = null
-    private mentorsCache: Observable<Mentor[]> | null = null
+    private coursesCache$: Observable<CoursesByTechnology> | null = null
+    private studentsFeedbackCache$: Observable<StudentFeedback[]> | null = null
+    private mentorsCache$: Observable<Mentor[]> | null = null
 
     private unsubscribe$ = new Subject()
 
@@ -33,18 +33,18 @@ export class RepositoryService implements
     }
 
     getCourses(): Observable<CoursesByTechnology>{
-        this.coursesCache = this.getOrFetch(this.coursesCache, this._getCourses())
-        return this.coursesCache
+        this.coursesCache$ = this.getOrFetch(this.coursesCache$, this._getCourses())
+        return this.coursesCache$
     }
 
     getStudentFeedbacks(): Observable<StudentFeedback[]> {
-        this.studentsFeedbackCache = this.getOrFetch(this.studentsFeedbackCache, this._getStudentFeedbacks())
-        return this.studentsFeedbackCache
+        this.studentsFeedbackCache$ = this.getOrFetch(this.studentsFeedbackCache$, this._getStudentFeedbacks())
+        return this.studentsFeedbackCache$
     }
 
     getMentors(): Observable<Mentor[]> {
-        this.mentorsCache = this.getOrFetch(this.mentorsCache, this._getMentors())
-        return this.mentorsCache
+        this.mentorsCache$ = this.getOrFetch(this.mentorsCache$, this._getMentors())
+        return this.mentorsCache$
     }
 
     ngOnDestroy(): void {
