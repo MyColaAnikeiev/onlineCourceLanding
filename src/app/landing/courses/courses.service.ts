@@ -18,13 +18,7 @@ export class CoursesService {
 
   getCourses(technology: string): Observable<Course[]>{
     return this.repo.getCourses().pipe(
-      map(courses => {
-        if(technology in courses){
-          return courses[technology]
-        }else{
-          return []
-        }
-      })
+      map(courses => courses[technology] ?? [])
     )
   }
 
