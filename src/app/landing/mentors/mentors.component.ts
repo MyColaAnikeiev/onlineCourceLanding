@@ -8,15 +8,10 @@ import { Mentor } from '../shared/interfaces/mentor';
   templateUrl: './mentors.component.html',
   styleUrls: ['./mentors.component.css']
 })
-export class MentorsComponent implements OnInit{
+export class MentorsComponent{
 
-  mentors$: Observable<Mentor[]> | undefined = undefined
+  mentors$: Observable<Mentor[]> = this.mentorsService.getMentors()
 
   constructor(private mentorsService: MentorsService){
   }
-
-  ngOnInit(): void {
-    this.mentors$ = this.mentorsService.getMentors()
-  }
-
 }

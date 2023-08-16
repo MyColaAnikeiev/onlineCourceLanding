@@ -8,13 +8,9 @@ import { Observable, Subscription } from 'rxjs';
   templateUrl: './students-feedback.component.html',
   styleUrls: ['./students-feedback.component.css']
 })
-export class StudentsFeedbackComponent implements OnInit{
-  studentFeedbacks$: Observable<StudentFeedback[]> | undefined = undefined
+export class StudentsFeedbackComponent{
+  studentFeedbacks$: Observable<StudentFeedback[]> = this.feedbackService.getFeedbacks()
 
   constructor(private feedbackService: StudentsFeedbackService){}
-
-  ngOnInit(): void {
-    this.studentFeedbacks$ = this.feedbackService.getFeedbacks()
-  }
 
 }
