@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
-import { dummyMentors } from './dummyMentors';
+import { Component, OnInit } from '@angular/core';
+import { MentorsService } from './mentors.service';
+import { Observable } from 'rxjs';
+import { Mentor } from '../shared/interfaces/mentor';
 
 @Component({
   selector: 'app-mentors',
   templateUrl: './mentors.component.html',
-  styleUrls: [
-    '../common.css',
-    './mentors.component.css'
-  ]
+  styleUrls: ['./mentors.component.css']
 })
-export class MentorsComponent {
-  mentors = dummyMentors
+export class MentorsComponent{
+
+  mentors$: Observable<Mentor[]> = this.mentorsService.getMentors()
+
+  constructor(private mentorsService: MentorsService){
+  }
 }

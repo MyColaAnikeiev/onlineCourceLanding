@@ -1,3 +1,5 @@
+import { Observable } from "rxjs"
+
 export interface Course {
     href: string,
     category: string,
@@ -7,4 +9,12 @@ export interface Course {
     numberOfClasses: number,
     studentGroupSize?: number,
     rating: number
+}
+
+export interface CoursesByTechnology{
+    [technologyName: string]: Course[]
+}
+
+export interface CoursesRepository{
+    getCourses(): Observable<CoursesByTechnology>
 }

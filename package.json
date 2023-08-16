@@ -1,6 +1,6 @@
 {
-  "name": "online-cource-landing",
-  "version": "0.1.0",
+  "name": "online-cources",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
